@@ -1,0 +1,5 @@
+<!-- src/assets/vue.svg -->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#42b883" d="M64 20L10 108h22L64 60l32 48h22L64 20z"/>
+  <path fill="#35495e" d="M64 20L10 108h22L64 60l32 48h22L64 20z" opacity=".1"/>
+</svg>
