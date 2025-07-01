@@ -3,7 +3,7 @@
         <div class="max-w-screen-x1 mx-auto px-4 py-4 flex justify-between items-center">
             <!--logo-->
             <a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-pink-600 rounded">
-                <h1 class="text-2x1 font-bold text-pink-600">Glamour Clinic </h1>
+                <h1 class="text-2x1 font-bold text-pink-600">Clinic Beauty </h1>
             </a>
             <!--Desktop navigation-->
             <nav class="hidden md:flex space-x-6" aria-label="Primary Navigation">
