@@ -24,7 +24,7 @@
             aria-hidden="true"
           ></span>
           <span
-            class="hidden lg:block absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-pink-600 opacity-20 z-0"
+            class="hidden lg:block absolute -top-8 -right-8 w-40 h-40 rounded-full bg-pink-600 opacity-20 z-0"
             aria-hidden="true"
           ></span>
         </figure>
