@@ -6,6 +6,7 @@
     <About />
     <Specialists />
     <Contact />
+    <Footer />
   </div>
 </template>
 <script setup>
@@ -17,6 +18,7 @@ import Services from './components/Services.vue';
 import About from './components/About.vue';
 import Specialists from './components/Specialists.vue';
 import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 onMounted(() => {
