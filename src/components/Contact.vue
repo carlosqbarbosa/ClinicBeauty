@@ -17,17 +17,19 @@
           <section class="bg-white rounded-2xl shadow-lg p-8 h-full">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h2>
             <address class="space-y-6">
-              <article v-for="(item,index) in contactItems" 
-              :key="index" 
-              class="flex-items-start">
-                <figure class="bg-pink-100 p-3 rounded-full mr-4 flex-shrink-0">
-                  <Icon :icon="item.icon" class="text-pink-600 text-xl"/>
-                </figure>
-                <div>
-                  <h3 class="font-semibold text-gray-800 mb-1">{{ item.title }}</h3>
-                  <div v-html="item.content" class="text-gray-600"></div>
-                </div>
-            </article>
+              <article
+                  v-for="(item,index) in contactItems"
+                  :key="index"
+                  class="flex items-center bg-pink-100 px-4 py-3 rounded-full space-x-4"
+                >
+                  <figure class="bg-white p-2 rounded-full flex items-center justify-center">
+                    <Icon :icon="item.icon" class="text-pink-600 text-xl" />
+                  </figure>
+                  <div class="flex-1">
+                    <h3 class="font-semibold text-gray-800">{{ item.title }}</h3>
+                    <div v-html="item.content" class="text-gray-600 text-sm"></div>
+                  </div>
+                </article>
             </address>
             <figure class="mt-8 rounded-xl overflow-hidden shadow-md">
               <img src="@assets/contactImg.jpg" alt="clinica"
@@ -38,6 +40,43 @@
         </aside>
 
         <!--contact form -->
+        <section class="lg:w-3/5 flex-1">
+          <div class="bg-white rounded-2xl shadow-lg p-8 h-full">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Form</h2>
+            <form action="#" method="POST" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                  <input type="text" id="name" name="name" required 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                  <input type="email" id="email" name="email" required 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+              </div>
+              <div>
+                <label for="service" class="block text-gray-700 mb-2">Select Service</label>
+                <select id="service" name="service" v-model="services"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                  <option v-for="service in services" :key="service.value" :value="service.value">{{ service.label }}</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                <textarea id="message" name="message" rows="4" required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+              </div>
+              <button type="submit"
+              class="w-full bg-pink-600 text-white font-semibold py-3 rounded-lg hover:bg-pink-700 transition-colors duration-300">
+                Send Message
+              </button>
+            </form>
+
+          </div>
+
+        </section>
       </main>
     </div>
   </section>    
