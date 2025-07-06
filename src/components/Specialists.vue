@@ -55,7 +55,7 @@
 
       <!-- CTA Section -->
       <aside class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl p-8 md:p-12 text-center relative
-      overflow-hidden" data-aos-="fade-up" data-aos-delay="500">
+      overflow-hidden" data-aos="fade-up" data-aos-delay="500">
         <span class=" absolute -top-20 -left-20 w-40 h-40 rounded-full bg-pink-200 opacity-20" aria-hidden="true"></span>
         <span class=" absolute -bottom-20 -right-20 w-60 h-60 rounded-full bg-purple-200 opacity-20" aria-hidden="true"></span>
         <div class="relative z-10">

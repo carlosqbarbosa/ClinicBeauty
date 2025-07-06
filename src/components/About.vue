@@ -10,7 +10,7 @@
         <figure class="lg:w-5/12 relative">
           <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl w-full max-w-md mx-auto">
             <img
-              src="@assets/about.jpg"
+              :src="AboutImg"
               alt="about us"
               loading="lazy"
               class="max-w-md w-full h-auto object-cover aspect-[4/5] rounded-xl mx-auto"
@@ -45,7 +45,7 @@
           <section class="mb-8">
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Approach</h3>
             <ul class="space-y-3">
-              <li v-for="(item, index) in approchItems" :key="index" class="flex items-start">
+              <li v-for="(item, index) in approachItems" :key="index" class="flex items-start">
                 <figure class="bg-pink-100 p-1 rounded-full mr-3">
                   <Icon :icon="item.icon" class="text-pink-600 text-xl" aria-hidden="true" />
                 </figure>
@@ -85,9 +85,7 @@
       </article>
 
       <!--Mission statement -->
-      <aside
-        class="mt-20 bg-white rounded-2xl p-8 md:p-12 shadow-lg relative overflow-hidden"
-      >
+      <aside class="mt-20 bg-white rounded-2xl p-8 md:p-12 shadow-lg relative overflow-hidden">
         <span
           class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-pink-500 opacity-40"
           aria-hidden="true"
@@ -117,33 +115,35 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
+import AboutImg from '@/assets/about.jpg';
 
-const approchItems = ref([
+const approachItems = ref([
   {
-    icon: "fa-solid:heart",
-    title: "Personalized Care",
+    icon: 'fa-solid:heart',
+    title: 'Personalized Care',
   },
   {
-    icon: "fa-solid:user-md", 
-    title: "Medical Expertise",
+    icon: 'fa-solid:user-md',
+    title: 'Medical Expertise',
   },
   {
-    icon: "fa-solid:clinic-medical",
-    title: "Modern Facilities",
+    icon: 'fa-solid:clinic-medical',
+    title: 'Modern Facilities',
   },
 ]);
 
 const stats = ref([
   {
-    icon: "fa-solid:user",
-    value: "500+",
-    label: "Happy Clients",
+    icon: 'fa-solid:user',
+    value: '500+',
+    label: 'Happy Clients',
   },
   {
-    icon: "fa-solid:calendar-check",
-    value: "1200+",
-    label: "Appointments",
+    icon: 'fa-solid:calendar-check',
+    value: '1200+',
+    label: 'Appointments',
   },
 ]);
 </script>
