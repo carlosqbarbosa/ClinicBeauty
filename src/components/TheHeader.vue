@@ -1,9 +1,9 @@
 <template>
-    <header class=" relative bg-gradient-to-r from-pink-100 to-purple-100 ">
+    <header class=" relative bg-gradient-to-r from-blue-100 to-green-100 ">
         <div class="max-w-screen-x1 mx-auto px-4 py-4 flex justify-between items-center">
             <!--logo-->
-            <a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-pink-600 rounded">
-                <h1 class="text-2xl font-extrabold tracking-wide text-pink-600">
+            <a href="/" class="flex items-center focus:outline-none focus:ring-2 focus:ring-blue-600 rounded">
+                <h1 class="text-2xl font-extrabold tracking-wide text-blue-600">
                     Clinic Beauty
                 </h1>
             </a>
@@ -12,20 +12,20 @@
                 <a v-for="(link, index) in navLinks" 
                 :key="index" 
                 href="link.href"
-                class="text-gray-700 hover:text-pink-600 transition-colors duration-200 focus:outline-none
-                focus:ring-2 focus:ring-pink-600 rounded">{{ link.label }}</a
+                class="text-gray-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none
+                focus:ring-2 focus:ring-blue-600 rounded">{{ link.label }}</a
                 >
             </nav>
             <!--Appoinment Button (Desktop)-->
             <div class="hidden md:block">
                 <a href="#appointment" 
-                class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 rounded-full transition-colors 
-                duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800 focus:ring-offset-2">
-                    Book Appointment
+                class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-colors 
+                duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2">
+                    Agendar Consulta
                 </a>
             </div>
             <!--Mobile Menu Button-->
-            <button class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-pink-600 rounded"
+            <button class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-600 rounded"
             @click="toggleMenu" aria-label="Toggle menu"
             :aria-expanded="isMenuOpen.toString()" aria-controls="mobile-menu">
             <Icon :icon="isMenuOpen ? 'mdi:close' : 'mdi:menu' " class="w-6 h-6"/>
@@ -39,18 +39,18 @@
                 <ul class="flex flex-col space-y-4">
                     <li v-for="(link,index) in navLinks" :key="index">
                         <a :href="link.href"
-                        class="block text-gray-700 hover:text-pink-600 transition-colors duration-200 py-2 px-2
-                        focus:outline-none focus:ring-2 focus:ring-pink-600 rounded" @click="toggleMenu">
+                        class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2 px-2
+                        focus:outline-none focus:ring-2 focus:ring-blue-600 rounded" @click="toggleMenu">
                         {{ link.label }}
                     </a>
                     </li>
                     <li>
                         <a href="#appointment" 
-                        class="block bg-pink-600 hover:bg-pink-700 text-white text-center 
+                        class="block bg-blue-600 hover:bg-blue-700 text-white text-center 
                         px-4 py-2 rounded-full transition-colors duration-200 shadow-md focus:outline-none 
-                        focus:ring-2 focus:ring-pink-800 focus:ring-offset-2"
+                        focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
                         @click="toggleMenu">
-                            Book Appointment
+                            Agendar Consulta
                         </a>
                     </li>
                 </ul>
@@ -64,10 +64,10 @@
 import { ref } from 'vue';
 const navLinks = ref([
     {href: '#home', label: 'Home'},
-    {href: '#services', label: 'Services'},
-    {href: '#about', label: 'About Us'},
-    {href: '#contact', label: 'Contact'},
-    {href: '#speciali', label: 'Our Specialties'},
+    {href: '#services', label: 'Serviços'},
+    {href: '#about', label: 'Sobre'},
+    {href: '#contact', label: 'Contato'},
+    {href: '#speciali', label: 'Nossos Especialistas'},
 ]);
 const isMenuOpen = ref(false);
 const toggleMenu = () => {

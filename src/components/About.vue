@@ -1,5 +1,5 @@
 <template>
-  <section class="py-14 overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100" id="about">
+  <section class="py-14 overflow-hidden bg-gradient-to-br from-blue-100 to-green-100" id="about">
     <div class="container mx-auto px-4">
       <article
         data-aos="fade-up"
@@ -20,11 +20,11 @@
 
           <!--Decorative Elements-->
           <span
-            class="hidden lg:block absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-pink-500 opacity-20 z-0"
+            class="hidden lg:block absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-blue-500 opacity-20 z-0"
             aria-hidden="true"
           ></span>
           <span
-            class="hidden lg:block absolute -top-8 -right-8 w-40 h-40 rounded-full bg-pink-600 opacity-20 z-0"
+            class="hidden lg:block absolute -top-8 -right-8 w-40 h-40 rounded-full bg-blue-600 opacity-20 z-0"
             aria-hidden="true"
           ></span>
         </figure>
@@ -33,21 +33,21 @@
         <div data-aos="fade-up" data-aos-delay="600" class="lg:w-7/12">
           <header>
             <h2 id="about-heading" class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              About <span class="text-pink-600">Clinic Beauty</span>
+              Sobre a <span class="text-blue-600">Clinic Beauty</span>
             </h2>
             <p class="text-lg text-gray-600 mb-6">
-              Welcome to Clinic Beauty, your premier destination for advanced skincare and beauty
-              treatments. Our team of experienced professionals is dedicated to helping you achieve
-              your beauty goals with personalized care and the latest technology.
+              Bem-vindo à Clinic Beauty, o seu destino de referência em cuidados avançados com a pele e tratamentos de beleza. 
+              Nossa equipe de profissionais experientes está comprometida em ajudar você a alcançar seus objetivos de beleza, 
+              oferecendo um atendimento personalizado aliado às mais modernas tecnologias.
             </p>
           </header>
 
           <section class="mb-8">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Approach</h3>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Como Atuamos</h3>
             <ul class="space-y-3">
               <li v-for="(item, index) in approachItems" :key="index" class="flex items-start">
-                <figure class="bg-pink-100 p-1 rounded-full mr-3">
-                  <Icon :icon="item.icon" class="text-pink-600 text-xl" aria-hidden="true" />
+                <figure class="bg-blue-100 p-1 rounded-full mr-3">
+                  <Icon :icon="item.icon" class="text-blue-600 text-xl" aria-hidden="true" />
                 </figure>
                 <p class="text-gray-700">{{ item.title }}</p>
               </li>
@@ -62,7 +62,7 @@
               class="bg-white p-4 rounded-lg shadow-sm flex items-center"
             >
               <figure class="mr-3">
-                <Icon :icon="item.icon" class="text-pink-500" aria-hidden="true" />
+                <Icon :icon="item.icon" class="text-blue-500" aria-hidden="true" />
               </figure>
               <div>
                 <strong class="text-xl font-bold text-gray-800">{{ item.value }}</strong>
@@ -74,11 +74,11 @@
           <nav>
             <a
               href="#appointment"
-              class="bg-pink-600 hover:bg-pink-700 text-white text-center px-6 py-3 rounded-full 
-              inline-block transition shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800 
+              class="bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-full 
+              inline-block transition shadow-md focus:outline-none focus:ring-2 focus:ring-blue-800 
               focus:ring-offset-2"
             >
-              Meet Our Specialists
+              Conheça os nossos Especialistas
             </a>
           </nav>
         </div>
@@ -87,25 +87,24 @@
       <!--Mission statement -->
       <aside class="mt-20 bg-white rounded-2xl p-8 md:p-12 shadow-lg relative overflow-hidden">
         <span
-          class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-pink-500 opacity-40"
+          class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-blue-500 opacity-40"
           aria-hidden="true"
         ></span>
         <div class="relative z-10">
-          <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Mission</h3>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">Nossa Missão</h3>
           <blockquote class="text-lg text-gray-700 mb-6">
             <p>
-              At Clinic Beauty, we are committed to providing exceptional care and innovative
-              treatments that enhance your natural beauty. Our mission is to empower you with
-              confidence and well-being through personalized skincare solutions.
+             Na Clinic Beauty, temos o compromisso de oferecer um cuidado excepcional e tratamentos inovadores que valorizam a sua beleza natural. 
+             Nossa missão é proporcionar a você mais confiança e bem-estar por meio de soluções personalizadas para o cuidado da pele.
             </p>
           </blockquote>
           <figure class="flex items-center">
-            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
-              <Icon icon="fa-solid:user-md" class="text-pink-600" aria-hidden="true" />
+            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+              <Icon icon="fa-solid:user-md" class="text-blue-600" aria-hidden="true" />
             </div>
             <figcaption>
-              <cite class="text-gray-800">Dr. Jane Smith</cite>
-              <p class="text-sm text-gray-600">Founder & Chief Dermatologist</p>
+              <cite class="text-gray-800">Dr. Jane Barbosa</cite>
+              <p class="text-sm text-gray-600">Fundadora & Dermatologista</p>
             </figcaption>
           </figure>
         </div>
@@ -122,15 +121,15 @@ import AboutImg from '@/assets/about.jpg';
 const approachItems = ref([
   {
     icon: 'fa-solid:heart',
-    title: 'Personalized Care',
+    title: 'Atendimento Personalizado',
   },
   {
     icon: 'fa-solid:user-md',
-    title: 'Medical Expertise',
+    title: 'Especialização Médica',
   },
   {
     icon: 'fa-solid:clinic-medical',
-    title: 'Modern Facilities',
+    title: 'Estrutura Moderna',
   },
 ]);
 
@@ -138,12 +137,12 @@ const stats = ref([
   {
     icon: 'fa-solid:user',
     value: '500+',
-    label: 'Happy Clients',
+    label: 'Clientes Satisfeitos',
   },
   {
     icon: 'fa-solid:calendar-check',
     value: '1200+',
-    label: 'Appointments',
+    label: 'Consultas Realizadas',
   },
 ]);
 </script>
