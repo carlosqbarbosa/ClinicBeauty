@@ -8,7 +8,7 @@ Este projeto tem como objetivo simular uma landing page profissional de uma clí
 
 ##  Prévia
 
-![Capa do projeto](./src/assets/mulher-esteticista-na-clinica-consulta-cliente.jpg)
+![Preview da página inicial](./docs/preview-home.png)
 
 ## Tecnologias Utilizadas
 
