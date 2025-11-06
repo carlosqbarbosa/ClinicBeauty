@@ -17,23 +17,6 @@ Este projeto tem como objetivo simular uma landing page profissional de uma clí
 - [Tailwind CSS](https://tailwindcss.com/) – Framework utilitário de CSS
 - HTML5 e CSS3
 
-##  Estrutura do Projeto
-
-📁 src
-┣ 📂 assets # Imagens da clínica e dos profissionais
-┣ 📂 components # Componentes reutilizáveis da interface
-┃ ┣ 📄 About.vue
-┃ ┣ 📄 Contact.vue
-┃ ┣ 📄 Footer.vue
-┃ ┣ 📄 Hero.vue
-┃ ┣ 📄 Services.vue
-┃ ┣ 📄 Specialists.vue
-┃ ┗ 📄 TheHeader.vue
-┣ 📄 App.vue
-┣ 📄 main.js
-┗ 📄 style.css
-
-
 ## Como Executar Localmente
 
 1. **Clone o repositório**
