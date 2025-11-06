@@ -10,7 +10,7 @@
         <figure class="lg:w-5/12 relative">
           <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl w-full max-w-md mx-auto">
             <img
-              src="../assets/About.jpg"
+              :src="aboutImg"
               alt="about us"
               loading="lazy"
               class="max-w-md w-full h-auto object-cover aspect-[4/5] rounded-xl mx-auto"
@@ -116,7 +116,7 @@
 <script setup>
 import { ref } from 'vue';
 import { Icon } from '@iconify/vue';
-import AboutImg from '@/assets/about.jpg';
+import aboutImg from "@/assets/about.jpg";
 
 const approachItems = ref([
   {
