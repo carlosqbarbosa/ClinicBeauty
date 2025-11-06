@@ -12,41 +12,74 @@
       </header>
 
       <!-- Specialists Grid -->
-      <ul data-aos="fade-up" data-aos-delay="500" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" role="list">
-        <li v-for="doctor in specialists" :key="doctor.id" class="group relative" role="listitem">
-          <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full">
-            <figure class="relative h-[340px] md:h-[300px] lg:h-[280px] overflow-hidden">
-              <img :src="doctor.image" :alt="doctor.name"
+      <ul
+        data-aos="fade-up"
+        data-aos-delay="500"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        role="list"
+      >
+        <li
+          v-for="doctor in specialists"
+          :key="doctor.id"
+          class="group relative"
+          role="listitem"
+        >
+          <article
+            class="flex flex-col rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full bg-white"
+          >
+            <!-- Imagem -->
+            <figure class="relative h-[260px] overflow-hidden">
+              <img
+                :src="doctor.image"
+                :alt="doctor.name"
                 class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                loading="lazy">
-              <span class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden="true"></span>
-              <aside class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full flex items-center shadow-sm"
-                :aria-label="`Avaliação: ${doctor.rating} estrelas`">
-                <Icon v-for="i in 5" :key="i"
+                loading="lazy"
+              />
+              <span
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                aria-hidden="true"
+              ></span>
+
+              <!-- Avaliação -->
+              <aside
+                class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full flex items-center shadow-sm"
+                :aria-label="`Avaliação: ${doctor.rating} estrelas`"
+              >
+                <Icon
+                  v-for="i in 5"
+                  :key="i"
                   :icon="i <= doctor.rating ? 'mdi:star' : 'mdi:star-outline'"
-                  class="text-yellow-400 inline" />
+                  class="text-yellow-400 inline"
+                />
                 <span class="ml-1 text-sm font-medium">{{ doctor.rating }}.0</span>
               </aside>
             </figure>
-            <div class="p-6 relative -m-10">
-              <div class="bg-blue-50 rounded-lg shadow-md p-6">
-                <header>
-                  <h3 class="text-xl font-bold text-gray-800 mb-1">{{ doctor.name }}</h3>
-                  <p class="text-blue-600 font-medium mb-3">{{ doctor.role }}</p>
-                </header>
-                <p class="text-gray-600 mb-4">{{ doctor.bio }}</p>
-                <ul class="flex flex-wrap gap-2 mb-4">
-                  <li v-for="(spec, i) in doctor.specialities" :key="i">
-                    <span class="bg-blue-50 text-blue-600 text-xs font-medium px-3 py-1 rounded-full">
-                      {{ spec }}
-                    </span>
-                  </li>
-                </ul>
-              </div>
+
+            <!-- Conteúdo -->
+            <div class="flex flex-col justify-between flex-1 p-6 bg-blue-50">
+              <header>
+                <h3 class="text-xl font-bold text-gray-800 mb-1">
+                  {{ doctor.name }}
+                </h3>
+                <p class="text-blue-600 font-medium mb-3">{{ doctor.role }}</p>
+              </header>
+
+              <p class="text-gray-600 mb-4 flex-1">{{ doctor.bio }}</p>
+
+              <ul class="flex flex-wrap gap-2">
+                <li v-for="(spec, i) in doctor.specialities" :key="i">
+                  <span
+                    class="bg-white text-blue-600 text-xs font-medium px-3 py-1 rounded-full shadow-sm"
+                  >
+                    {{ spec }}
+                  </span>
+                </li>
+              </ul>
             </div>
           </article>
         </li>
       </ul>
+
 
       <!-- CTA Section -->
       <aside class="bg-gradient-to-r from-blue-100 to-green-100 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden" data-aos="fade-up" data-aos-delay="500">
